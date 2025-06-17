@@ -21,7 +21,7 @@ excerpt: >
       <h1 style="margin: 0 0 0.2rem 0; font-size: 2.4em">Soumak Maitra</h1>
       <p style="margin: 0; font-size: 1.2em;"><strong>Department of Theoretical Physics, TIFR, Mumbai.</strong></p>
     </div>
-    <img src="/assets/images/profile.jpg" style="max-width: 300px; border-radius: 8px;" alt="Profile photo">
+    <img src="/assets/images/profile.jpg" style="max-width: 300px; border-radius: 50%;" alt="Profile photo">
   </div>
   
 ---
