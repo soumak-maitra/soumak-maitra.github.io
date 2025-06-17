@@ -21,7 +21,7 @@ excerpt: >
       <h1 style="margin: 0 0 0.2rem 0;">Soumak Maitra</h1>
       <p style="margin: 0; font-size: 1.2em;"><strong>Postdoctoral researcher at DTP, TIFR, Mumbai.</strong></p>
     </div>
-    <img src="/assets/images/profile.jpg" style="max-width: 260px; border-radius: 8px;" alt="Profile photo">
+    <img src="/assets/images/profile.jpg" style="max-width: 400px; border-radius: 8px;" alt="Profile photo">
   </div>
 ---
 
