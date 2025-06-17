@@ -16,12 +16,12 @@ header:
     - label: "Contact"
       url: /contact/
 excerpt: >
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: -2.5rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: -3rem;">
     <div style="max-width: 60%;">
-      <h1 style="margin: 0 0 0.2rem 0;">Soumak Maitra</h1>
+      <h1 style="margin: 0 0 0.2rem 0; font-size: 2.4em">Soumak Maitra</h1>
       <p style="margin: 0; font-size: 1.2em;"><strong>Postdoctoral researcher at DTP, TIFR, Mumbai.</strong></p>
     </div>
-    <img src="/assets/images/profile.jpg" style="max-width: 400px; border-radius: 8px;" alt="Profile photo">
+    <img src="/assets/images/profile.jpg" style="max-width: 260px; border-radius: 8px;" alt="Profile photo">
   </div>
 ---
 
