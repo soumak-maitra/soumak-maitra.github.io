@@ -63,6 +63,7 @@ defaults:
       comments: false
       share: true
       related: true
+      custom_css: "/assets/css/custom.css"
 
   - scope:
       path: ""
@@ -70,6 +71,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      custom_css: "/assets/css/custom.css"
 
 # SEO and social sharing
 social:
