@@ -5,21 +5,16 @@ permalink: /research/
 author_profile: true
 ---
 
-## Research Interests
+## Research
 
-- Large-scale structure formation and cosmic reionization
-- Astrophysics of the intergalactic medium (IGM)
-- Lyman-α forest and Lyman-α emitters as cosmological probes
-- Quasar absorption lines and high-redshift spectroscopy
-- Machine learning in astrophysical and cosmological analysis
-- N-body and hydrodynamical simulations
-- Observational cosmology with high-redshift tracers
+My research lies at the intersection of theoretical astrophysics, cosmology, and data-driven analysis. I am broadly interested in the formation and evolution of the large-scale structure of the Universe, the astrophysics of the intergalactic medium (IGM), and the physical processes governing cosmic reionization.
 
-## Current Work
+A significant part of my work involves studying the IGM using quasar absorption spectra, particularly the Lyman-α forest. By analyzing its clustering properties and redshift evolution—both in observations and simulations—I aim to understand the distribution of neutral hydrogen and the growth of structure in the early Universe.
 
-At TIFR, I’m focused on integrating deep learning methods—particularly variational autoencoders and information maximizing neural networks—with simulated and observed quasar absorption data, to probe the morphology of reionization and constrain cosmological parameters.
+In parallel, I work on Lyman-α emitters (LAEs) as cosmological tracers, especially during the Epoch of Reionization. I develop tools to model their spatial clustering and use higher-order statistics such as the bispectrum to constrain the topology and morphology of ionized regions. These efforts are directly relevant to current and upcoming surveys.
 
-My recent work includes:
-- Modeling the LAE bispectrum to characterize patchiness during reionization.
-- Using higher-order clustering statistics in redshift space for the Lyman-α forest.
-- Developing neural network pipelines for parameter inference directly from Fourier-space features.
+More recently, I have been integrating machine learning techniques—especially deep learning models such as variational autoencoders (VAEs) and information-maximizing neural networks (IMNNs)—into my cosmological workflows. These tools enable tomographic reconstruction of 3D density fields, parameter estimation from high-dimensional data, and novel ways of exploring simulated and observational datasets.
+
+I also have experience with hydrodynamical and N-body simulations (e.g., GADGET), and I often work with mock survey realizations to test methods that bridge theory and observation. 
+---
+

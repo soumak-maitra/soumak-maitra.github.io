@@ -1,5 +1,5 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "clean"
 
 title: "Soumak Maitra"
 title_separator: "-"
@@ -11,7 +11,7 @@ repository: "soumak93/soumak93.github.io"
 
 # Author settings
 author:
-  name: "Soumak Maitra"
+  name: ""
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
   location: "Mumbai, India"
