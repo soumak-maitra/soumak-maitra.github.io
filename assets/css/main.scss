@@ -13,3 +13,8 @@
   border-radius: 50%; // optional: makes it circular
 }
 
+// Hide the site title from the masthead
+.masthead__inner-wrap > .site-title {
+  display: none !important;
+}
+
