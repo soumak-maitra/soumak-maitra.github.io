@@ -19,16 +19,6 @@ excerpt: >
   <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
     <div style="max-width: 60%;">
       <h1 style="margin: 0 0 0.4em 0;"> </h1>
-      <p style="line-height: 1.4; margin: 0 0 0.4em 0;">
-        Postdoctoral researcher in cosmology and astrophysics at TIFR, Mumbai.
-      </p>
-      <p style="line-height: 1.4; margin: 0 0 1.2em 0;">
-        My work explores cosmic reionization, Lyman-α forest, and ML applications in astrophysics.
-      </p>
-      <a class="btn btn--primary" href="/research/">Research</a>
-      <a class="btn btn--primary" href="/publications/">Publications</a>
-      <a class="btn btn--primary" href="/talks/">Talks</a>
-      <a class="btn btn--primary" href="/contact/">Contact</a>
     </div>
     <img src="/assets/images/profile.jpg" style="max-width: 400px; border-radius: 8px;" alt="Profile photo">
   </div>
