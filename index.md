@@ -17,16 +17,18 @@ header:
       url: /contact/
 excerpt: >
   <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-    <div style="flex: 1 1 65%;">
+    <div style="flex: 0 1 60%; max-width: 60%;">
+      <h1 style="margin-bottom: 0.3em;">Soumak Maitra</h1>
       <p style="margin: 0;">
         Postdoctoral researcher in cosmology and astrophysics at TIFR, Mumbai.<br>
         My work explores cosmic reionization, Lyman-α forest, and ML applications in astrophysics.
       </p>
     </div>
-    <div style="flex: 1 1 30%; text-align: right; margin-top: 1em;">
-      <img src="/assets/images/profile.jpg" alt="Soumak Maitra" style="max-width: 350px; border-radius: 12px;">
+    <div style="flex: 0 1 35%; text-align: right; margin-top: 1em;">
+      <img src="/assets/images/profile.jpg" alt="Soumak Maitra" style="max-width: 400px; border-radius: 12px;">
     </div>
   </div>
+
 ---
 
 Welcome! I’m **Soumak Maitra**, a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, Tata Institute of Fundamental Research (TIFR), Mumbai.
