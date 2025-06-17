@@ -9,9 +9,8 @@ url: "https://soumak93.github.io"
 baseurl: ""  # Required for GitHub user site
 repository: "soumak93/soumak93.github.io"
 
-# Author settings
+# Author settings (name removed to avoid duplication)
 author:
-  name: ""
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
   location: "Mumbai, India"
@@ -33,7 +32,7 @@ author:
 markdown: kramdown
 theme: null
 
-# Plugins (remote theme compatible)
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -64,14 +63,12 @@ defaults:
       share: true
       related: true
 
-
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-
 
 # SEO and social sharing
 social:
@@ -92,7 +89,7 @@ kramdown:
   auto_ids: true
   toc_levels: 1..6
 
-# Navigation bar (removes "Quick-Start Guide")
+# Navigation bar
 nav:
   - title: "Home"
     url: /
