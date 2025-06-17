@@ -28,8 +28,6 @@ excerpt: >
 
 Welcome! I’m **Soumak Maitra**, a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, Tata Institute of Fundamental Research (TIFR), Mumbai.
 
-My research centers on understanding the large-scale structure of the Universe and the physical state of the intergalactic medium (IGM), primarily through the analysis of quasar absorption spectra. I am particularly interested in using these observations to study cosmic reionization and the growth of structure over cosmic time. Currently, I am involved in modeling Lyman-α emitters (LAEs) as tracers of the reionization process, with a focus on constraining its spatial morphology.
-
-Alongside these efforts, I am increasingly exploring the application of machine learning techniques to cosmological data—leveraging their potential to extract physical insights from both simulations and observations.
+I am interested in cosmic reionization and its spatial morphology, which I study by modeling Lyman-α emitters as tracers of the process. More broadly, my research explores the large-scale structure of the Universe and the physical state of the intergalactic medium through quasar absorption spectra. I am also actively exploring the use of machine learning techniques to uncover physical insights from both cosmological simulations and observational datasets.
 
 
