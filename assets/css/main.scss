@@ -1,0 +1,15 @@
+---
+# Only the main Sass file needs front matter
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/clean"; // or your preferred skin
+@import "minimal-mistakes";             // load Minimal Mistakes SCSS
+
+.author__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; // optional: makes it circular
+}
+
