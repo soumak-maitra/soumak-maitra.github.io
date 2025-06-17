@@ -5,9 +5,9 @@ title: "Soumak Maitra"
 title_separator: "-"
 name: "Soumak Maitra"
 description: "Postdoctoral researcher in cosmology and astrophysics, exploring reionization, large-scale structure, and ML applications in the Universe"
-url: "https://soumak-maitra.github.io"
+url: "https://soumak93.github.io"
 baseurl: ""  # Required for GitHub user site
-repository: "soumak-maitra/soumak-maitra.github.io"
+repository: "soumak93/soumak93.github.io"
 
 # Author settings
 author:
@@ -28,7 +28,7 @@ author:
       url: "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/soumak-maitra"
+      url: "https://github.com/soumak93"
 
 markdown: kramdown
 theme: null
@@ -78,7 +78,111 @@ social:
   links:
     - "https://orcid.org/0000-0002-7684-4205"
     - "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
-    - "https://github.com/soumak-maitra"
+    - "https://github.com/soumak93"
+
+# Optional search (disabled by default)
+search: false
+
+# Markdown + HTML rendering
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..6
+
+# Navigation bar
+nav:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Talks"
+    url: /talks/
+  - title: "Contact"
+    url: /contact/
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+title: "Soumak Maitra"
+title_separator: "-"
+name: "Soumak Maitra"
+description: "Postdoctoral researcher in cosmology and astrophysics, exploring reionization, large-scale structure, and ML applications in the Universe"
+url: "https://soumak93.github.io"
+baseurl: ""  # Required for GitHub user site
+repository: "soumak93/soumak93.github.io"
+
+# Author settings
+author:
+  name: "Soumak Maitra"
+  avatar: "/assets/images/profile.jpg"  # You can remove this if no image
+  bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
+  location: "Mumbai, India"
+  email: "soumak.maitra@tifr.res.in"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:soumak.maitra@tifr.res.in"
+    - label: "ORCID"
+      icon: "ai ai-orcid"
+      url: "https://orcid.org/0000-0002-7684-4205"
+    - label: "NASA ADS"
+      icon: "fas fa-book"
+      url: "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/soumak93"
+
+markdown: kramdown
+theme: null
+
+# Plugins (remote theme compatible)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Include custom pages
+include:
+  - _pages
+
+# Output settings
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# SEO and social sharing
+social:
+  type: "Person"
+  name: "Soumak Maitra"
+  links:
+    - "https://orcid.org/0000-0002-7684-4205"
+    - "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
+    - "https://github.com/soumak93"
 
 # Optional search (disabled by default)
 search: false
