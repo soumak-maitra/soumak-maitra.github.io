@@ -1,11 +1,11 @@
 ---
-title: "Soumak Maitra"
+title: ""
 layout: splash
 permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
-  overlay_image: /assets/images/banner.jpg  # optional; you can comment this out if no image
+  overlay_image: /assets/images/banner.jpg
   actions:
     - label: "Research"
       url: /research/
@@ -16,17 +16,13 @@ header:
     - label: "Contact"
       url: /contact/
 excerpt: >
-  <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-top: -2.3rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: -2.5rem;">
     <div style="max-width: 60%;">
-      <p style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.2em;">
-        <strong>Postdoctoral researcher at DTP, TIFR, Mumbai.</strong>
-      </p>
+      <h1 style="margin: 0 0 0.2rem 0;">Soumak Maitra</h1>
+      <p style="margin: 0; font-size: 1.2em;"><strong>Postdoctoral researcher at DTP, TIFR, Mumbai.</strong></p>
     </div>
-    <img src="/assets/images/profile.jpg" style="max-width: 300px; border-radius: 8px;" alt="Profile photo">
+    <img src="/assets/images/profile.jpg" style="max-width: 260px; border-radius: 8px;" alt="Profile photo">
   </div>
-
-
-
 ---
 
 Welcome! I’m **Soumak Maitra**, a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, Tata Institute of Fundamental Research (TIFR), Mumbai.
