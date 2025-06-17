@@ -207,3 +207,6 @@ nav:
   - title: "Contact"
     url: /contact/
 
+exclude:
+  - CHANGELOG.md
+
