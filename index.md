@@ -24,15 +24,6 @@ excerpt: >
     <img src="/assets/images/profile.jpg" style="max-width: 260px; border-radius: 8px;" alt="Profile photo">
   </div>
   
-<!-- Minimal Mistakes adds the actions below automatically, but you can add spacing fix globally -->
-<style>
-  .page__hero--overlay .btn {
-    margin-top: -0.5rem !important;  /* tighter spacing */
-  }
-  .page__hero--overlay .page__meta {
-    margin-top: -1rem !important;
-  }
-</style>
 ---
 
 Welcome! I’m **Soumak Maitra**, a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, Tata Institute of Fundamental Research (TIFR), Mumbai.
