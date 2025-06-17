@@ -16,12 +16,15 @@ header:
     - label: "Contact"
       url: /contact/
 excerpt: >
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-top: 0; margin-top: -2rem;">
     <div style="max-width: 60%;">
-      <h1 style="margin: 0 0 0.4em 0;"> </h1>
+      <p style="margin: 0 0 0.4em 0; font-size: 1.3em; line-height: 1.4;">
+        <strong>Postdoctoral researcher at DTP, TIFR, Mumbai.</strong>
+      </p>
     </div>
-    <img src="/assets/images/profile.jpg" style="max-width: 400px; border-radius: 8px;" alt="Profile photo">
+    <img src="/assets/images/profile.jpg" style="max-width: 250px; border-radius: 8px;" alt="Profile photo">
   </div>
+
 
 ---
 
