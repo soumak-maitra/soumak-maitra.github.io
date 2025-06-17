@@ -1,9 +1,9 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "dark"
 
-title: "Soumak Maitra"
+title: ""  # This removes "Soumak Maitra" from the top nav bar
 title_separator: "-"
-name: ""  # Removed from top-left site nav bar
+name: ""   # Also blank to avoid default fallback
 description: "Postdoctoral researcher in cosmology and astrophysics, exploring reionization, large-scale structure, and ML applications in the Universe"
 url: "https://soumak93.github.io"
 baseurl: ""  # Required for GitHub user site
@@ -11,6 +11,7 @@ repository: "soumak93/soumak93.github.io"
 
 # Author settings
 author:
+  name: "Soumak Maitra"  # Used inside the home page
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
   location: "Mumbai, India"
@@ -32,7 +33,6 @@ author:
 markdown: kramdown
 theme: null
 
-# Plugins (remote theme compatible)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -41,16 +41,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-# Include custom pages
 include:
   - _pages
 
-# Output settings
 permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 
-# Page/post defaults
 defaults:
   - scope:
       path: ""
@@ -62,7 +59,6 @@ defaults:
       comments: false
       share: true
       related: true
-      custom_css: "/assets/css/custom.css"
 
   - scope:
       path: ""
@@ -70,9 +66,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      custom_css: "/assets/css/custom.css"
 
-# SEO and social sharing
+# Show profile picture on homepage and sidebar
+# Make sure `index.md` has `layout: home` and `author_profile: true`
+
 social:
   type: "Person"
   name: "Soumak Maitra"
@@ -81,17 +78,14 @@ social:
     - "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
     - "https://github.com/soumak93"
 
-# Optional search (disabled by default)
 search: false
 
-# Markdown + HTML rendering
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
   toc_levels: 1..6
 
-# Navigation bar
 nav:
   - title: "Home"
     url: /
@@ -104,7 +98,6 @@ nav:
   - title: "Contact"
     url: /contact/
 
-# Exclude files from build
 exclude:
   - CHANGELOG.md
 
