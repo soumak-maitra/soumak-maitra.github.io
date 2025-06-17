@@ -24,7 +24,7 @@ excerpt: >
       </p>
     </div>
     <div style="flex: 1 1 30%; text-align: right; margin-top: 1em;">
-      <img src="/assets/images/profile.jpg" alt="Soumak Maitra" style="max-width: 150px; border-radius: 12px;">
+      <img src="/assets/images/profile.jpg" alt="Soumak Maitra" style="max-width: 350px; border-radius: 12px;">
     </div>
   </div>
 ---
