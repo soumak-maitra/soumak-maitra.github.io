@@ -16,8 +16,8 @@ header:
     - label: "Contact"
       url: /contact/
 excerpt: >
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 0.5rem;">
-    <div style="max-width: 60%;">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: -2.5rem;">
+    <div style="max-width: 60%; margin-top: -2rem;">
       <h1 style="margin: 0 0 0.2rem 0; font-size: 2.4em">Soumak Maitra</h1>
       <p style="margin: 0; font-size: 1.2em;"><strong>Department of Theoretical Physics, TIFR, Mumbai.</strong></p>
     </div>
