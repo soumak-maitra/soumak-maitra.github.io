@@ -3,13 +3,13 @@ minimal_mistakes_skin: "dark"
 
 title: "Soumak Maitra"
 title_separator: "-"
-name: "Soumak Maitra"
+name: ""  # Removed from top-left site nav bar
 description: "Postdoctoral researcher in cosmology and astrophysics, exploring reionization, large-scale structure, and ML applications in the Universe"
 url: "https://soumak93.github.io"
 baseurl: ""  # Required for GitHub user site
 repository: "soumak93/soumak93.github.io"
 
-# Author settings (name removed to avoid duplication)
+# Author settings
 author:
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
@@ -32,7 +32,7 @@ author:
 markdown: kramdown
 theme: null
 
-# Plugins
+# Plugins (remote theme compatible)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -62,6 +62,7 @@ defaults:
       comments: false
       share: true
       related: true
+      custom_css: "/assets/css/custom.css"
 
   - scope:
       path: ""
@@ -69,6 +70,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      custom_css: "/assets/css/custom.css"
 
 # SEO and social sharing
 social:
