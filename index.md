@@ -11,8 +11,6 @@ header:
       url: /research/
     - label: "Publications"
       url: /publications/
-    - label: "Talks"
-      url: /talks/
     - label: "CV"
       url: /assets/files/my_resume.pdf
       target: "_blank"
