@@ -13,7 +13,7 @@ repository: "soumak-maitra/soumak-maitra.github.io"
 author:
   name: "Soumak Maitra"  # Used inside the home page
   avatar: "/assets/images/profile.jpg"
-  bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
+  bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and Machine Learning."
   location: "Mumbai, India"
   email: "soumak.maitra@theory.tifr.res.in"
   links:
