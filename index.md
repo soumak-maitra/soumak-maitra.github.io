@@ -10,7 +10,7 @@ header:
     - label: "Research"
       url: /research/
     - label: "Publications"
-      url: /publications/
+      url: https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ
     - label: "CV"
       url: /assets/files/my_resume.pdf
       target: "_blank"
