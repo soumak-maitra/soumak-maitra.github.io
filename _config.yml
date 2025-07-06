@@ -17,9 +17,6 @@ author:
   location: "Mumbai, India"
   email: "soumak.maitra@theory.tifr.res.in"
   links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:soumak.maitra@theory.tifr.res.in"
     - label: "ORCID"
       icon: "fab fa-orcid"
       url: "https://orcid.org/0000-0002-7684-4205"
