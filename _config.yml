@@ -9,9 +9,8 @@ url: "https://soumak-maitra.github.io"
 baseurl: ""  # Required for GitHub user site
 repository: "soumak-maitra/soumak-maitra.github.io"
 
-# Author settings
 author:
-  name: "Soumak Maitra"  # Used inside the home page
+  name: "Soumak Maitra"
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, IGM, and Machine Learning."
   location: "Mumbai, India"
@@ -23,7 +22,6 @@ author:
     - label: "NASA ADS"
       icon: "fas fa-book"
       url: "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
-    
 
 markdown: kramdown
 theme: null
@@ -38,6 +36,7 @@ plugins:
 
 include:
   - _pages
+  - sitemap.xml  # ✅ Ensure sitemap is included in the build
 
 permalink: /:categories/:title/
 paginate: 5
@@ -62,8 +61,11 @@ defaults:
       layout: single
       author_profile: true
 
-# Show profile picture on homepage and sidebar
-# Make sure `index.md` has `layout: home` and `author_profile: true`
+  # ✅ Force sitemap inclusion for all content
+  - scope:
+      path: ""
+    values:
+      sitemap: true
 
 social:
   type: "Person"
@@ -96,4 +98,3 @@ nav:
 
 exclude:
   - CHANGELOG.md
-
