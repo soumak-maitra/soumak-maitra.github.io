@@ -5,9 +5,9 @@ title: ""  # This removes "Soumak Maitra" from the top nav bar
 title_separator: "-"
 name: ""   # Also blank to avoid default fallback
 description: "Postdoctoral researcher in cosmology and astrophysics, exploring reionization, large-scale structure, and ML applications in the Universe"
-url: "https://soumak93.github.io"
+url: "https://soumak-maitra.github.io"
 baseurl: ""  # Required for GitHub user site
-repository: "soumak93/soumak93.github.io"
+repository: "soumak-maitra/soumak-maitra.github.io"
 
 # Author settings
 author:
@@ -15,20 +15,18 @@ author:
   avatar: "/assets/images/profile.jpg"
   bio: "Postdoc at TIFR working on cosmic reionization, Lyman-α forest, and ML in cosmology."
   location: "Mumbai, India"
-  email: "soumak.maitra@tifr.res.in"
+  email: "soumak.maitra@theory.tifr.res.in"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:soumak.maitra@tifr.res.in"
+      url: "mailto:soumak.maitra@theory.tifr.res.in"
     - label: "ORCID"
       icon: "ai ai-orcid"
       url: "https://orcid.org/0000-0002-7684-4205"
     - label: "NASA ADS"
       icon: "fas fa-book"
       url: "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/soumak93"
+    
 
 markdown: kramdown
 theme: null
@@ -76,7 +74,6 @@ social:
   links:
     - "https://orcid.org/0000-0002-7684-4205"
     - "https://ui.adsabs.harvard.edu/public-libraries/iXxQkSBNRyqX3YxHeLm5JQ"
-    - "https://github.com/soumak93"
 
 search: false
 
@@ -95,6 +92,8 @@ nav:
     url: /publications/
   - title: "Talks"
     url: /talks/
+  - title: "Github"
+    url: /github/
   - title: "Contact"
     url: /contact/
 
