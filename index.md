@@ -16,6 +16,9 @@ header:
     - label: "CV"
       url: /assets/files/my_resume.pdf
       target: "_blank"
+    - label: "GitHub"
+      url: https://github.com/soumak-maitra
+      target: "_blank"
     - label: "Contact"
       url: /contact/
 excerpt: >
