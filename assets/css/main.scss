@@ -4,63 +4,150 @@
 
 @charset "utf-8";
 
-/* Load theme skin + core first */
+/* ------------------------------------------------------------
+   Load theme skin first, then the core. Put variable overrides
+   (if any) between these two imports.
+------------------------------------------------------------- */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
 @import "minimal-mistakes";
 
-/* ---------- Your tweaks ---------- */
+/* =========================
+   Global look & feel
+   ========================= */
 
-/* Avatar */
-.author__avatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+/* Background image + subtle readability gradients (top & bottom) */
+html, body { min-height: 100%; }
+body {
+  background:
+    /* top-to-bottom soft vignette for text legibility */
+    linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.10) 30%, rgba(0,0,0,.55) 100%),
+    /* optional radial glow near top-right */
+    radial-gradient(60% 40% at 85% 10%, rgba(0,0,0,.45), rgba(0,0,0,0) 60%),
+    url("{{ '/assets/images/wb.png' | relative_url }}")
+    center / cover no-repeat fixed;
+  background-color: #0b0b0b; /* fallback while image loads */
+}
+
+/* Cleaner, translucent masthead */
+.masthead,
+.greedy-nav {
+  background: rgba(0,0,0,.28) !important;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.20) !important;
 }
 
 /* Hide site title text if you don’t want it in the masthead */
 .masthead__inner-wrap > .site-title,
 .site-title { display: none !important; }
 
-/* Site-wide background image */
-html, body { min-height: 100%; }
-
-body {
-  background-color: #0b0b0b; /* fallback while image loads */
-  background:
-    url("{{ '/assets/images/wb.png' | relative_url }}")
-    center / cover no-repeat fixed;
+/* Avatar style */
+.author__avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-/* Make the masthead transparent (remove the strip look) */
-.masthead,
-.greedy-nav { background: transparent !important; box-shadow: none !important; }
+/* Kill the hero’s default black film and the old full-width boxes */
+.page__hero--overlay,
+.page__hero--overlay .wrapper { background: transparent !important; }
+.page__hero--overlay::before { background: none !important; }
 
-/* REMOVE the big black block: keep the page wrapper transparent */
-.page { background: transparent !important; }
+.page,
+.layout--single .page,
+.layout--splash .page,
+.archive,
+.page__content { background: transparent !important; }
 
-/* Apply a subtle glass card only to the inner content (not the whole page) */
-.page__inner-wrap,
-.archive {                       /* posts lists also look nice with the same style */
-  background: rgba(0, 0, 0, 0.38);  /* softer than before */
+/* =========================
+   Content cards
+   ========================= */
+
+/* Soft glass card only around inner content (non-splash pages) */
+.layout--single .page .page__inner-wrap,
+.archive > .page .page__inner-wrap {
+  background: rgba(0,0,0,.24);
+  border: 1px solid rgba(255,255,255,.07);
   border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
   padding: 1.25rem 1.5rem;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
-/* On the splash (home hero) keep everything transparent—no card boxes there */
-.layout--splash .page__inner-wrap { background: transparent; box-shadow: none; }
+/* Keep splash/home hero completely free of boxes */
+.layout--splash .page .page__inner-wrap {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 
-/* Sidebar: lighter, not a heavy box */
-.sidebar {
-  background: rgba(0,0,0,0.28);
+/* Sidebar: lighter and consistent with content card */
+.sidebar,
+.sidebar .sidebar__inner,
+.author__content,
+.author__urls-wrapper {
+  background: rgba(0,0,0,.18) !important;
+  border: 1px solid rgba(255,255,255,.06);
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,.22) !important;
 }
 
-/* Footer tint (optional; remove if you prefer fully transparent) */
-.page__footer { background: rgba(0,0,0,0.55); }
+/* Footer tint (subtle) */
+.page__footer {
+  background: rgba(0,0,0,.35);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* =========================
+   Typography & UI polish
+   ========================= */
+
+/* Headings: slightly tighter and crisper on dark bg */
+.page h1, .page h2, .page h3 {
+  letter-spacing: .2px;
+  text-rendering: optimizeLegibility;
+}
+
+/* Links: understated underline on hover for accessibility */
+.page a {
+  transition: color .15s ease, text-decoration-color .15s ease;
+  text-decoration: none;
+}
+.page a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.5);
+}
+
+/* Buttons (including home splash buttons) */
+.btn, .btn--primary, .btn--inverse, .btn--large {
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  transition: transform .08s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.28);
+}
+.btn--primary {
+  background: rgba(255,255,255,.08);
+}
+.btn--primary:hover {
+  background: rgba(255,255,255,.14);
+}
+
+/* List blocks on Research/Publications pages—remove dark slabs */
+.archive__item, .archive__item-teaser {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Spacing tweaks for large screens */
+@media (min-width: 1100px) {
+  .page .page__inner-wrap { padding: 1.75rem 2rem; }
+}
 
 /* Mobile: avoid fixed-background jank */
 @media (max-width: 768px) {
