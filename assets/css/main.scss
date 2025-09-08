@@ -1,63 +1,68 @@
 ---
-# Only the main Sass file needs front matter so Jekyll processes Liquid.
+# Let Jekyll process Liquid in SCSS
 ---
 
 @charset "utf-8";
 
-/* ------------------------------------------------------------
-   Load Minimal Mistakes skin + theme, then put overrides below.
-   You can set `minimal_mistakes_skin` in _config.yml.
-------------------------------------------------------------- */
+/* Load theme skin + core first */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
 @import "minimal-mistakes";
 
-/* =========================
-   Your custom overrides
-   ========================= */
+/* ---------- Your tweaks ---------- */
 
-/* Author avatar tweaks */
+/* Avatar */
 .author__avatar {
   width: 200px;
   height: 200px;
-  border-radius: 50%; // make circular
+  border-radius: 50%;
 }
 
-/* Hide the site title from the masthead & header */
-.masthead__inner-wrap > .site-title { display: none !important; }
+/* Hide site title text if you don’t want it in the masthead */
+.masthead__inner-wrap > .site-title,
 .site-title { display: none !important; }
 
-/* ---------- Site-wide background image ---------- */
-/* Put your image at: assets/images/bg.webp */
+/* Site-wide background image */
 html, body { min-height: 100%; }
 
 body {
-  /* Fallback color while image loads */
-  background-color: #0b0b0b;
-
-  /* Background image (uses Liquid so it works under subpaths) */
+  background-color: #0b0b0b; /* fallback while image loads */
   background:
-    url("{{ '/assets/images/wb.png' | relative_url }}")
+    url("{{ '/assets/images/bg.webp' | relative_url }}")
     center / cover no-repeat fixed;
 }
 
-/* Make content readable on top of background.
-   For dark skins use a dark translucent card;
-   switch to rgba(255,255,255,0.92) if you use a light skin. */
-.page {
-  background-color: rgba(0, 0, 0, 0.60);
-  /* Optional subtle blur of the image behind the card (supported browsers only) */
+/* Make the masthead transparent (remove the strip look) */
+.masthead,
+.greedy-nav { background: transparent !important; box-shadow: none !important; }
+
+/* REMOVE the big black block: keep the page wrapper transparent */
+.page { background: transparent !important; }
+
+/* Apply a subtle glass card only to the inner content (not the whole page) */
+.page__inner-wrap,
+.archive {                       /* posts lists also look nice with the same style */
+  background: rgba(0, 0, 0, 0.38);  /* softer than before */
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  padding: 1.25rem 1.5rem;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 
-/* If using the splash layout (hero header), let that section be transparent */
-.layout--splash .page { background: transparent; }
+/* On the splash (home hero) keep everything transparent—no card boxes there */
+.layout--splash .page__inner-wrap { background: transparent; box-shadow: none; }
 
-/* Mobile: avoid jank from fixed backgrounds */
+/* Sidebar: lighter, not a heavy box */
+.sidebar {
+  background: rgba(0,0,0,0.28);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Footer tint (optional; remove if you prefer fully transparent) */
+.page__footer { background: rgba(0,0,0,0.55); }
+
+/* Mobile: avoid fixed-background jank */
 @media (max-width: 768px) {
   body { background-attachment: scroll; }
 }
-
-/* Optional: slightly translucent sidebar/footer to match the card */
-.sidebar { background-color: rgba(0,0,0,0.50); }
-.page__footer { background-color: rgba(0,0,0,0.65); }
