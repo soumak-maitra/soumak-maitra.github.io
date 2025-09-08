@@ -153,3 +153,31 @@ body {
 @media (max-width: 768px) {
   body { background-attachment: scroll; }
 }
+
+/* === Fill the viewport and remove the bottom gap === */
+html, body { height: 100%; }             /* ensure the root boxes are full height */
+body {
+  min-height: 100vh;                      /* at least the viewport */
+  margin: 0;                              /* kill any UA margins */
+  display: flex;                          /* stack content + footer vertically */
+  flex-direction: column;
+}
+
+/* Minimal Mistakes wraps content in .initial-content before the footer */
+.initial-content { flex: 1 0 auto; }      /* grow to fill remaining space */
+
+/* Footer sits flush at the bottom with no extra space */
+.page__footer {
+  flex-shrink: 0;
+  margin: 0;                              /* no bottom margin */
+  /* keep your tint if you like; otherwise make it transparent */
+  /* background: rgba(0,0,0,.35); */
+}
+
+/* In case any page blocks add bottom margins that create space under the footer */
+.page,
+.page__content { margin-bottom: 0 !important; }
+
+/* Ensure the html background never shows; body image covers all */
+html { background: transparent !important; }
+
