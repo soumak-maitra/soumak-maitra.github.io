@@ -1,25 +1,63 @@
 ---
-# Only the main Sass file needs front matter
+# Only the main Sass file needs front matter so Jekyll processes Liquid.
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/dark"; // or your preferred skin
-@import "minimal-mistakes";             // load Minimal Mistakes SCSS
+/* ------------------------------------------------------------
+   Load Minimal Mistakes skin + theme, then put overrides below.
+   You can set `minimal_mistakes_skin` in _config.yml.
+------------------------------------------------------------- */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
+@import "minimal-mistakes";
 
+/* =========================
+   Your custom overrides
+   ========================= */
+
+/* Author avatar tweaks */
 .author__avatar {
   width: 200px;
   height: 200px;
-  border-radius: 50%; // optional: makes it circular
+  border-radius: 50%; // make circular
 }
 
-// Hide the site title from the masthead
-.masthead__inner-wrap > .site-title {
-  display: none !important;
+/* Hide the site title from the masthead & header */
+.masthead__inner-wrap > .site-title { display: none !important; }
+.site-title { display: none !important; }
+
+/* ---------- Site-wide background image ---------- */
+/* Put your image at: assets/images/bg.webp */
+html, body { min-height: 100%; }
+
+body {
+  /* Fallback color while image loads */
+  background-color: #0b0b0b;
+
+  /* Background image (uses Liquid so it works under subpaths) */
+  background:
+    url("{{ '/assets/images/wb.png' | relative_url }}")
+    center / cover no-repeat fixed;
 }
 
-/* Hide the site title text from the top header */
-.site-title {
-  display: none !important;
+/* Make content readable on top of background.
+   For dark skins use a dark translucent card;
+   switch to rgba(255,255,255,0.92) if you use a light skin. */
+.page {
+  background-color: rgba(0, 0, 0, 0.60);
+  /* Optional subtle blur of the image behind the card (supported browsers only) */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
+/* If using the splash layout (hero header), let that section be transparent */
+.layout--splash .page { background: transparent; }
+
+/* Mobile: avoid jank from fixed backgrounds */
+@media (max-width: 768px) {
+  body { background-attachment: scroll; }
+}
+
+/* Optional: slightly translucent sidebar/footer to match the card */
+.sidebar { background-color: rgba(0,0,0,0.50); }
+.page__footer { background-color: rgba(0,0,0,0.65); }
