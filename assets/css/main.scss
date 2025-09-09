@@ -31,7 +31,7 @@ body {
 /* Cleaner, translucent masthead */
 .masthead,
 .greedy-nav {
-  background: rgba(0,0,0,.28) !important;
+  background: rgba(0,0,0,0) !important;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 18px rgba(0,0,0,.20) !important;
