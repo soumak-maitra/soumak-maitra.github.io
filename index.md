@@ -24,7 +24,7 @@ excerpt: >
     <img src="/assets/images/profile.jpg" alt="Profile photo" class="author__avatar" />
     <h1>Soumak Maitra</h1>
     <p>
-      I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, *Tata Institute of Fundamental Research (TIFR)*, Mumbai. I completed my Ph.D. at the *Inter-University Centre for Astronomy and Astrophysics (IUCAA)*, Pune, and previously held a postdoctoral position at the *Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs)*, Italy. I’m broadly interested in the large-scale structure of the Universe and its early evolution, including the Epoch of Reionization.
+      I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, <i>Tata Institute of Fundamental Research (TIFR)</i>, Mumbai. I completed my Ph.D. at the Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune, and previously held a postdoctoral position at the Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs), Italy. I’m broadly interested in the large-scale structure of the Universe and its early evolution, including the Epoch of Reionization.
     </p>
   </div>
 ---
