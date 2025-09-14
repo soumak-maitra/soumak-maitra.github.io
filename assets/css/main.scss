@@ -5,13 +5,13 @@
 @charset "utf-8";
 
 /* ------------------------------------------------------------
-   1) Load skin first, then core. Put overrides BEFORE core import.
+   Load skin FIRST, set overrides, then import core.
 ------------------------------------------------------------- */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
 
-/* ==== Layout + typography tweaks (override variables before core) ==== */
-$content-width: 980px;     /* tighter central column */
-$max-width: 1200px;        /* global wrapper cap */
+/* ---- Variable overrides (must be BEFORE core import) ---- */
+$content-width: 980px;     /* central text column */
+$max-width: 1200px;        /* wrapper cap */
 $doc-font-size: 17px;
 $border-radius: 14px;
 
@@ -20,16 +20,14 @@ $border-radius: 14px;
 /* =========================
    Global look & feel
    ========================= */
-
-/* Background image + subtle readability gradients (top & bottom) */
-html, body { min-height: 100%; }
+html, body { min-height: 100%; height: 100%; }
 body {
   background:
     linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.10) 30%, rgba(0,0,0,.55) 100%),
     radial-gradient(60% 40% at 85% 10%, rgba(0,0,0,.45), rgba(0,0,0,0) 60%),
     url("{{ '/assets/images/wb.png' | relative_url }}")
     center / cover no-repeat fixed;
-  background-color: #0b0b0b; /* fallback while image loads */
+  background-color: #0b0b0b;
   color: #e9ecf1;
   margin: 0;
   display: flex;
@@ -38,37 +36,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure central wrapper is actually centered and capped */
+/* Center wrapper and constrain width */
 .wrapper { max-width: $max-width; margin-left: auto; margin-right: auto; }
 
-/* Cleaner, translucent masthead */
-.masthead,
-.greedy-nav {
+/* Masthead cleanup */
+.masthead, .greedy-nav {
   background: rgba(0,0,0,0) !important;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0) !important;
+  box-shadow: none !important;
 }
+.masthead__inner-wrap > .site-title, .site-title { display: none !important; }
 
-/* Hide site title text if you don’t want it in the masthead */
-.masthead__inner-wrap > .site-title,
-.site-title { display: none !important; }
-
-/* Headings: slightly tighter and crisper on dark bg */
-.page h1, .page h2, .page h3 {
-  letter-spacing: .2px;
-  text-rendering: optimizeLegibility;
-}
-
-/* Links: understated underline on hover for accessibility */
-.page a {
-  transition: color .15s ease, text-decoration-color .15s ease;
-  text-decoration: none;
-}
-.page a:hover {
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,.5);
-}
+/* Type + links */
+.page h1, .page h2, .page h3 { letter-spacing: .2px; text-rendering: optimizeLegibility; }
+.page a { transition: color .15s ease, text-decoration-color .15s ease; text-decoration: none; }
+.page a:hover { text-decoration: underline; text-decoration-color: rgba(255,255,255,.5); }
 
 /* Buttons */
 .btn, .btn--primary, .btn--inverse, .btn--large {
@@ -77,25 +60,16 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,.25);
   transition: transform .08s ease, box-shadow .15s ease, background-color .15s ease;
 }
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(0,0,0,.28);
-}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.28); }
 .btn--primary { background: rgba(255,255,255,.08); }
 .btn--primary:hover { background: rgba(255,255,255,.14); }
 
-/* Kill the hero’s default black film and the old full-width boxes */
-.page__hero--overlay,
-.page__hero--overlay .wrapper { background: transparent !important; }
+/* Remove default hero film and slabs */
+.page__hero--overlay, .page__hero--overlay .wrapper { background: transparent !important; }
 .page__hero--overlay::before { background: none !important; }
+.page, .layout--single .page, .layout--splash .page, .archive, .page__content { background: transparent !important; }
 
-.page,
-.layout--single .page,
-.layout--splash .page,
-.archive,
-.page__content { background: transparent !important; }
-
-/* Soft glass card only around inner content (non-splash pages) */
+/* Content cards on inner pages */
 .layout--single .page .page__inner-wrap,
 .archive > .page .page__inner-wrap {
   background: rgba(0,0,0,.24);
@@ -107,110 +81,39 @@ body {
   backdrop-filter: blur(3px);
 }
 
-/* Keep splash/home hero completely free of boxes */
-.layout--splash .page .page__inner-wrap {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Sidebar: lighter and consistent with content card */
-.sidebar,
-.sidebar .sidebar__inner,
-.author__content,
-.author__urls-wrapper {
+/* Sidebar glass */
+.sidebar, .sidebar .sidebar__inner, .author__content, .author__urls-wrapper {
   background: rgba(0,0,0,.18) !important;
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,.22) !important;
 }
 
-/* Footer tint (subtle) */
-.page__footer {
-  background: rgba(0,0,0,.35);
-  border-top: 1px solid rgba(255,255,255,.06);
-}
+/* Footer */
+.page__footer { background: rgba(0,0,0,.35); border-top: 1px solid rgba(255,255,255,.06); }
 
-/* === Fill the viewport and remove the bottom gap === */
-html, body { height: 100%; }
+/* Fill viewport, remove bottom gap */
 .initial-content { flex: 1 0 auto; }
 .page__footer { flex-shrink: 0; margin: 0; }
 .page, .page__content { margin-bottom: 0 !important; }
 html { background: transparent !important; }
 
 /* =========================
-   Hero: central layout + top avatar
+   Hero: force vertical stack & centered avatar
    ========================= */
-.page__hero--overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* center text */
-  padding: 2rem 1rem;
-}
-
-.page__hero--overlay .page__title,
-.page__hero--overlay .page__lead {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Center the avatar above the text */
-.page__hero--overlay .author__avatar {
-  order: -1; /* puts avatar above text */
-  margin: 0 0 1rem 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  box-shadow: 0 8px 26px rgba(0,0,0,.35);
-  border: 2px solid rgba(255,255,255,.18);
-}
-
-/* =========================
-   CENTRALIZED CONTENT
-   ========================= */
-
-/* Constrain inner text column for readability everywhere */
-.page .page__inner-wrap {
-  max-width: $content-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Archive items minimal and clean */
-.archive__item, .archive__item-teaser {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: 0 !important;
-}
-.archive__item-title { text-align: left; }
-
-/* =========================
-   Responsive tweaks
-   ========================= */
-@media (min-width: 1100px) {
-  .page .page__inner-wrap { padding: 1.75rem 2rem; }
-}
-@media (max-width: 768px) {
-  body { background-attachment: scroll; }
-  .page__hero--overlay .author__avatar {
-    width: 160px; height: 160px;
-  }
-}
-
-/* ===== Force hero to stack + center (works with MM splash) ===== */
-.page__hero--overlay,
-.page__hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;          /* center title, lead, buttons */
+/* Collapse the default two-column hero into a vertical stack */
+.page__hero--overlay .wrapper,
+.page__hero .wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/* Constrain text widths for nice reading */
+/* Constrain title/lead for readability */
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead,
 .page__hero .page__title,
@@ -220,40 +123,48 @@ html { background: transparent !important; }
   margin-right: auto;
 }
 
-/* Center ANY avatar/image MM might place in the hero */
+/* Center ANY avatar placed by MM inside hero (above text by default) */
 .page__hero--overlay .author__avatar,
 .page__hero .author__avatar,
 .page__hero--overlay .page__meta .author__avatar,
 .page__hero .page__meta .author__avatar {
-  order: -1;                   /* put above text; remove to put below */
-  margin: 0 0 1rem 0 !important;
+  order: -1; /* move above title; delete this line to put below */
+  margin: 0 auto 1rem auto !important;
   width: 200px; height: 200px;
   border-radius: 50%;
   box-shadow: 0 8px 26px rgba(0,0,0,.35);
   border: 2px solid rgba(255,255,255,.18);
 }
 
-/* If your splash has a two-column grid, collapse it on home */
-body.home .page__hero--overlay .wrapper,
-body.home .page__hero .wrapper {
-  display: contents;           /* ignore internal grid to allow flex centering */
+/* If your hero uses a plain <img>, center that too */
+.page__hero--overlay img, .page__hero img {
+  display: block;
+  margin-left: auto; margin-right: auto;
 }
 
-/* Buttons row under the intro: center + wrap neatly */
-.page__hero--overlay .btn, .page__hero .btn {
-  margin: .25rem .35rem;
-}
+/* Buttons row under the intro: center/wrap neatly */
 .page__hero--overlay .buttons, .page__hero .buttons {
   display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem;
 }
+.page__hero--overlay .btn, .page__hero .btn { margin: .25rem .35rem; }
 
-/* Keep hero background transparent */
-.page__hero--overlay,
-.page__hero--overlay .wrapper { background: transparent !important; }
-.page__hero--overlay::before { background: none !important; }
+/* =========================
+   Centralized content everywhere
+   ========================= */
+.page .page__inner-wrap { max-width: $content-width; margin-left: auto; margin-right: auto; }
 
-/* Responsive size tweak */
-@media (max-width: 768px){
+/* Minimal archive look */
+.archive__item, .archive__item-teaser { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+.archive__item-title { text-align: left; }
+
+/* =========================
+   Responsive tweaks
+   ========================= */
+@media (max-width: 768px) {
+  body { background-attachment: scroll; }
   .page__hero--overlay .author__avatar,
-  .page__hero .author__avatar { width:160px; height:160px; }
+  .page__hero .author__avatar { width: 160px; height: 160px; }
+}
+@media (min-width: 1100px) {
+  .page .page__inner-wrap { padding: 1.75rem 2rem; }
 }
