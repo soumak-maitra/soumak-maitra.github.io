@@ -103,7 +103,7 @@ html { background: transparent !important; }
    (handles: theme grid, .align-right floats, and inline flex rows)
    ============================================================ */
 
-/* 0) If author image uses the theme's utility .align-right, neutralize it */
+/* Neutralize MM utility that floats images right */
 .page__hero--overlay .align-right,
 .page__hero .align-right {
   float: none !important;
@@ -111,7 +111,7 @@ html { background: transparent !important; }
   margin: 0 auto 1rem auto !important;
 }
 
-/* 1) Kill default 2-col grid and floats inside hero */
+/* Collapse default 2-col layout inside hero */
 .page__hero--overlay .wrapper,
 .page__hero .wrapper,
 .page__hero--overlay .grid,
@@ -133,7 +133,7 @@ html { background: transparent !important; }
   display: block !important;
 }
 
-/* 2) If index.md used an inline row flex, flip it to a centered column */
+/* If excerpt used an inline row flex, flip it to column */
 .page__hero--overlay .page__lead > div,
 .page__hero .page__lead > div {
   display: flex !important;
@@ -144,7 +144,7 @@ html { background: transparent !important; }
   margin-top: 0 !important;
 }
 
-/* 3) Constrain title/lead for readability */
+/* Constrain title/lead for readability */
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead,
 .page__hero .page__title,
@@ -154,73 +154,55 @@ html { background: transparent !important; }
   margin-right: auto;
 }
 
-/* 4) Profile image: TOP + centered, with responsive, aesthetic size */
-.page__hero--overlay .author__avatar,
-.page__hero .author__avatar,
-.page__hero--overlay .page__lead img,
-.page__hero .page__lead img,
-.page__hero--overlay img.author__avatar,
-.page__hero img.author__avatar {
-  order: -1; /* move above title */
-  float: none !important;
-  display: block !important;
-  margin: 0 auto 1rem auto !important;
-  width: clamp(320px, 18vw, 440px) !important;  /* responsive: 160–220px */
-  height: clamp(320px, 18vw, 440px) !important;
-  object-fit: cover;
-  border-radius: 50% !important;
-  box-shadow: 0 8px 26px rgba(0,0,0,.35);
-  border: 2px solid rgba(255,255,255,.18);
-}
-
-/* 5) Buttons row under intro: centered */
-.page__hero--overlay .buttons, .page__hero .buttons {
-  display: flex !important;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .35rem;
-}
-.page__hero--overlay .btn, .page__hero .btn { margin: .25rem .35rem; }
-
-/* Optional helper if you use <div class="hero-center"> in index.md */
+/* Optional helper if you used <div class="hero-center"> in index.md */
 .hero-center {
-  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
-/* XXL avatar — top-center, responsive */
+
+/* ============================================================
+   FINAL AVATAR SIZING — big, crisp, centered on top
+   ============================================================ */
 .hero-center .author__avatar,
 .page__hero--overlay .author__avatar,
-.page__hero .author__avatar {
-  width: clamp(300px, 28vw, 440px);
-  height: clamp(300px, 28vw, 440px);
-  border-radius: 50%;
+.page__hero .author__avatar,
+.page__hero--overlay .page__lead img.author__avatar,
+.page__hero .page__lead img.author__avatar {
+  order: -1; /* ensure image sits above title */
+  float: none !important;
+  display: block !important;
+  margin: 0 auto 1.25rem !important;
+  width:  clamp(380px, 34vw, 620px) !important;  /* LARGE, responsive */
+  height: clamp(380px, 34vw, 620px) !important;
   aspect-ratio: 1 / 1;
-  display: block;
-  margin: 0 auto 1.25rem;
-  object-fit: cover;                 /* neat crop */
-  box-shadow: 0 12px 32px rgba(0,0,0,.35);
+  object-fit: cover;
+  border-radius: 50% !important;
+  box-shadow: 0 14px 36px rgba(0,0,0,.35);
   border: 2px solid rgba(255,255,255,.18);
 }
 
-/* Slightly smaller on very small phones */
+/* Slightly smaller on very small phones for balance */
 @media (max-width: 420px) {
   .hero-center .author__avatar,
   .page__hero--overlay .author__avatar,
   .page__hero .author__avatar {
-    width: 260px;
-    height: 260px;
+    width: 280px !important;
+    height: 280px !important;
   }
 }
 
-/* Optional: cap on ultra-wide desktops for balance */
+/* Lock a pleasing cap on ultra-wide desktops */
 @media (min-width: 1600px) {
   .hero-center .author__avatar,
   .page__hero--overlay .author__avatar,
   .page__hero .author__avatar {
-    width: 420px;
-    height: 420px;
+    width: 560px !important;
+    height: 560px !important;
   }
 }
-
 
 /* =========================
    Centralized content everywhere
