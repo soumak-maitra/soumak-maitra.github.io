@@ -101,16 +101,26 @@ html { background: transparent !important; }
 /* =========================
    Hero: force vertical stack & centered avatar
    ========================= */
-/* Collapse the default two-column hero into a vertical stack */
+/* Kill default grid/float that puts avatar right */
 .page__hero--overlay .wrapper,
-.page__hero .wrapper {
+.page__hero .wrapper,
+.page__hero--overlay .grid,
+.page__hero .grid {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
+  justify-content: flex-start !important;
   text-align: center !important;
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.page__hero--overlay .grid__item,
+.page__hero .grid__item {
+  width: 100% !important;
+  max-width: none !important;
+  float: none !important;
+  display: block !important;
 }
 
 /* Constrain title/lead for readability */
@@ -123,12 +133,14 @@ html { background: transparent !important; }
   margin-right: auto;
 }
 
-/* Center ANY avatar placed by MM inside hero (above text by default) */
+/* Center avatar above text */
 .page__hero--overlay .author__avatar,
 .page__hero .author__avatar,
 .page__hero--overlay .page__meta .author__avatar,
 .page__hero .page__meta .author__avatar {
-  order: -1; /* move above title; delete this line to put below */
+  order: -1; /* move above title */
+  float: none !important;
+  display: block !important;
   margin: 0 auto 1rem auto !important;
   width: 200px; height: 200px;
   border-radius: 50%;
@@ -136,15 +148,19 @@ html { background: transparent !important; }
   border: 2px solid rgba(255,255,255,.18);
 }
 
-/* If your hero uses a plain <img>, center that too */
+/* Catch plain <img> too */
 .page__hero--overlay img, .page__hero img {
   display: block;
-  margin-left: auto; margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Buttons row under the intro: center/wrap neatly */
+/* Buttons row under intro: centered */
 .page__hero--overlay .buttons, .page__hero .buttons {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .35rem;
 }
 .page__hero--overlay .btn, .page__hero .btn { margin: .25rem .35rem; }
 
