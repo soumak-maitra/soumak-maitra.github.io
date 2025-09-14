@@ -175,8 +175,8 @@ html { background: transparent !important; }
   float: none !important;
   display: block !important;
   margin: 0 auto 1.25rem !important;
-  width:  clamp(380px, 34vw, 620px) !important;  /* LARGE, responsive */
-  height: clamp(380px, 34vw, 620px) !important;
+  width:  clamp(320px, 28vw, 520px) !important;  /* was 380px,34vw,620px */
+  height: clamp(320px, 28vw, 520px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50% !important;
