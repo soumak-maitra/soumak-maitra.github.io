@@ -214,3 +214,13 @@ html { background: transparent !important; }
 @media (min-width: 1100px) {
   .page .page__inner-wrap { padding: 1.75rem 2rem; }
 }
+
+/* Keep institute links inline inside the hero paragraph */
+.page__hero--overlay .page__lead p a,
+.hero-center p a {
+  display: inline !important;
+  white-space: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
