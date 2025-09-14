@@ -20,12 +20,20 @@ header:
     - label: "Contact"
       url: /contact/
 excerpt: >
+  <style>
+    .page__hero--overlay .hero-center p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
   <div class="hero-center">
     <img src="/assets/images/profile.jpg" alt="Profile photo" class="author__avatar" />
     <h1>Soumak Maitra</h1>
     <p>
-      I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, <strong>Tata Institute of Fundamental Research (TIFR)</strong>, Mumbai.
-      I completed my Ph.D. at the <strong>Inter-University Centre for Astronomy and Astrophysics (IUCAA)</strong>, Pune, and previously held a postdoctoral position at the <strong>Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs)</strong>, Italy.
+      I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics,
+      <em>Tata Institute of Fundamental Research (TIFR),</em> Mumbai. I completed my Ph.D. at the
+      <em>Inter-University Centre for Astronomy and Astrophysics (IUCAA),</em> Pune, and previously held a postdoctoral position at the
+      <em>Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs),</em> Italy.
       I’m broadly interested in the large-scale structure of the Universe and its early evolution, including the Epoch of Reionization.
     </p>
   </div>
