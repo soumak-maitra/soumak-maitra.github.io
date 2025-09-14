@@ -195,7 +195,7 @@ html { background: transparent !important; }
 }
 
 /* Lock a pleasing cap on ultra-wide desktops */
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .hero-center .author__avatar,
   .page__hero--overlay .author__avatar,
   .page__hero .author__avatar {
