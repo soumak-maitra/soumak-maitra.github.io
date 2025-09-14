@@ -198,3 +198,62 @@ html { background: transparent !important; }
     width: 160px; height: 160px;
   }
 }
+
+/* ===== Force hero to stack + center (works with MM splash) ===== */
+.page__hero--overlay,
+.page__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;          /* center title, lead, buttons */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Constrain text widths for nice reading */
+.page__hero--overlay .page__title,
+.page__hero--overlay .page__lead,
+.page__hero .page__title,
+.page__hero .page__lead {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center ANY avatar/image MM might place in the hero */
+.page__hero--overlay .author__avatar,
+.page__hero .author__avatar,
+.page__hero--overlay .page__meta .author__avatar,
+.page__hero .page__meta .author__avatar {
+  order: -1;                   /* put above text; remove to put below */
+  margin: 0 0 1rem 0 !important;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35);
+  border: 2px solid rgba(255,255,255,.18);
+}
+
+/* If your splash has a two-column grid, collapse it on home */
+body.home .page__hero--overlay .wrapper,
+body.home .page__hero .wrapper {
+  display: contents;           /* ignore internal grid to allow flex centering */
+}
+
+/* Buttons row under the intro: center + wrap neatly */
+.page__hero--overlay .btn, .page__hero .btn {
+  margin: .25rem .35rem;
+}
+.page__hero--overlay .buttons, .page__hero .buttons {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem;
+}
+
+/* Keep hero background transparent */
+.page__hero--overlay,
+.page__hero--overlay .wrapper { background: transparent !important; }
+.page__hero--overlay::before { background: none !important; }
+
+/* Responsive size tweak */
+@media (max-width: 768px){
+  .page__hero--overlay .author__avatar,
+  .page__hero .author__avatar { width:160px; height:160px; }
+}
