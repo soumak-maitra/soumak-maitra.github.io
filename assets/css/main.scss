@@ -165,8 +165,8 @@ html { background: transparent !important; }
   float: none !important;
   display: block !important;
   margin: 0 auto 1rem auto !important;
-  width: clamp(160px, 18vw, 220px) !important;  /* responsive: 160–220px */
-  height: clamp(160px, 18vw, 220px) !important;
+  width: clamp(320px, 18vw, 440px) !important;  /* responsive: 160–220px */
+  height: clamp(320px, 18vw, 440px) !important;
   object-fit: cover;
   border-radius: 50% !important;
   box-shadow: 0 8px 26px rgba(0,0,0,.35);
