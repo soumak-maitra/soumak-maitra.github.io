@@ -99,17 +99,12 @@ body {
 html { background: transparent !important; }
 
 /* ============================================================
-   SPLASH HERO — force centered, vertical stack with top avatar
-   (handles: theme grid, .align-right floats, and inline flex rows)
+   SPLASH HERO — centered, vertical stack with top avatar
    ============================================================ */
 
 /* Neutralize MM utility that floats images right */
 .page__hero--overlay .align-right,
-.page__hero .align-right {
-  float: none !important;
-  display: block !important;
-  margin: 0 auto 1rem auto !important;
-}
+.page__hero .align-right { float: none !important; display: block !important; margin: 0 auto 1rem auto !important; }
 
 /* Collapse default 2-col layout inside hero */
 .page__hero--overlay .wrapper,
@@ -126,45 +121,38 @@ html { background: transparent !important; }
   padding-right: 1rem;
 }
 .page__hero--overlay .grid__item,
-.page__hero .grid__item {
-  width: 100% !important;
-  max-width: none !important;
-  float: none !important;
-  display: block !important;
-}
+.page__hero .grid__item { width: 100% !important; max-width: none !important; float: none !important; display: block !important; }
 
 /* If excerpt used an inline row flex, flip it to column */
 .page__hero--overlay .page__lead > div,
-.page__hero .page__lead > div {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  gap: 1rem !important;
-  margin-top: 0 !important;
-}
+.page__hero .page__lead > div { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 1rem !important; margin-top: 0 !important; }
 
 /* Constrain title/lead for readability */
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead,
 .page__hero .page__title,
-.page__hero .page__lead {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.page__hero .page__lead { max-width: 800px; margin-left: auto; margin-right: auto; }
 
-/* Optional helper if you used <div class="hero-center"> in index.md */
-.hero-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
+/* Helper wrapper */
+.hero-center { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+
+/* ============================================================
+   IMPORTANT: keep institute links inline (no forced line breaks)
+   ============================================================ */
+.page__hero--overlay .page__lead a,
+.layout--splash .page__lead a,
+.page__hero .page__lead a,
+.hero-center p a {
+  display: inline !important;
+  width: auto !important;
+  white-space: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: baseline !important;
 }
 
 /* ============================================================
-   FINAL AVATAR SIZING — big, crisp, centered on top
+   AVATAR SIZING — smaller cap on desktop, balanced overall
    ============================================================ */
 .hero-center .author__avatar,
 .page__hero--overlay .author__avatar,
@@ -174,27 +162,22 @@ html { background: transparent !important; }
   order: -1; /* ensure image sits above title */
   float: none !important;
   display: block !important;
-  margin: 0 auto 1.25rem !important;
-  width:  clamp(260px, 22vw, 440px) !important;  /* was 380px,34vw,620px */
-  height: clamp(260px, 22vw, 440px) !important;
+  margin: 0 auto 1.1rem !important;
+  width:  clamp(220px, 15vw, 300px) !important;   /* desktop cap ~300px */
+  height: clamp(220px, 15vw, 300px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50% !important;
-  box-shadow: 0 14px 36px rgba(0,0,0,.35);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
   border: 2px solid rgba(255,255,255,.18);
 }
 
-/* Slightly smaller on very small phones for balance */
+/* Very small phones: comfortable size */
 @media (max-width: 420px) {
   .hero-center .author__avatar,
   .page__hero--overlay .author__avatar,
-  .page__hero .author__avatar {
-    width: 280px !important;
-    height: 280px !important;
-  }
+  .page__hero .author__avatar { width: 200px !important; height: 200px !important; }
 }
-
-
 
 /* =========================
    Centralized content everywhere
@@ -208,19 +191,5 @@ html { background: transparent !important; }
 /* =========================
    Responsive tweaks
    ========================= */
-@media (max-width: 768px) {
-  body { background-attachment: scroll; }
-}
-@media (min-width: 1100px) {
-  .page .page__inner-wrap { padding: 1.75rem 2rem; }
-}
-
-/* Keep institute links inline inside the hero paragraph */
-.page__hero--overlay .page__lead p a,
-.hero-center p a {
-  display: inline !important;
-  white-space: normal !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
+@media (max-width: 768px) { body { background-attachment: scroll; } }
+@media (min-width: 1100px) { .page .page__inner-wrap { padding: 1.75rem 2rem; } }
