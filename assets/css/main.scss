@@ -161,8 +161,8 @@ html { background: transparent !important; }
   float: none !important;
   display: block !important;
   margin: 0 auto 1.1rem !important;
-  width:  clamp(480px, 12vw, 1080px) !important;   /* desktop cap ~300px */
-  height: clamp(480px, 12vw, 1080px) !important;
+  width:  clamp(320px, 10vw, 720px) !important;   /* desktop cap ~300px */
+  height: clamp(320px, 10vw, 720px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50% !important;
