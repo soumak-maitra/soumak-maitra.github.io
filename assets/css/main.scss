@@ -172,13 +172,6 @@ html { background: transparent !important; }
   border: 2px solid rgba(255,255,255,.18);
 }
 
-/* Very small phones: comfortable size */
-@media (max-width: 420px) {
-  .hero-center .author__avatar,
-  .page__hero--overlay .author__avatar,
-  .page__hero .author__avatar { width: 200px !important; height: 200px !important; }
-}
-
 /* =========================
    Centralized content everywhere
    ========================= */
