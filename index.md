@@ -19,12 +19,13 @@ header:
       target: "_blank"
     - label: "Contact"
       url: /contact/
-excerpt: >
-  <div class="hero-center">
-    {% include avatar.html %}
-    <h1>Soumak Maitra</h1>
-    <p>
-      Hello and welcome! I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, "Tata Institute of Fundamental Research (TIFR), Mumbai". I did my Ph.D. at the "Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune", and spent time in Italy as a postdoc at "Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs), Italy". I’m broadly interested in the large-scale structure of the Universe and its early evolution, including the Epoch of Reionization.
-    </p>
-  </div>
+excerpt: ""   # leave empty so nothing literal shows in the hero
 ---
+
+<div class="hero-center">
+  {% include avatar.html %}
+  <h1>Soumak Maitra</h1>
+  <p>
+    Hello and welcome! I’m a postdoctoral researcher in cosmology and astrophysics at the Department of Theoretical Physics, "Tata Institute of Fundamental Research (TIFR), Mumbai". I did my Ph.D. at the "Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune", and spent time in Italy as a postdoc at "Istituto Nazionale di Astrofisica – Osservatorio Astronomico di Trieste (INAF–OATs), Italy". I’m broadly interested in the large-scale structure of the Universe and its early evolution, including the Epoch of Reionization.
+  </p>
+</div>
