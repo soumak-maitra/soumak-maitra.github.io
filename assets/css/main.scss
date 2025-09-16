@@ -149,26 +149,43 @@ html { background: transparent !important; }
   vertical-align: baseline !important;
 }
 
-/* ============================================================
-   AVATAR SIZING — smaller cap on desktop, balanced overall
-   ============================================================ */
+/* Slightly bigger, but snap to fixed px at common breakpoints */
 .hero-center .author__avatar,
 .page__hero--overlay .author__avatar,
 .page__hero .author__avatar,
 .page__hero--overlay .page__lead img.author__avatar,
 .page__hero .page__lead img.author__avatar {
-  order: -1; /* ensure image sits above title */
-  float: none !important;
-  display: block !important;
-  margin: 0 auto 1.1rem !important;
-  width:  clamp(100px, 15vw, 240px) !important;   /* desktop cap ~300px */
-  height: clamp(100px, 15vw, 240px) !important;
+  width:  clamp(120px, 16vw, 280px) !important;
+  height: clamp(120px, 16vw, 280px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50% !important;
   box-shadow: 0 12px 30px rgba(0,0,0,.35);
   border: 2px solid rgba(255,255,255,.18);
 }
+
+/* Snap points to avoid fractional resampling at typical widths */
+@media (min-width: 900px) and (max-width: 1199.98px) {
+  .hero-center .author__avatar,
+  .page__hero--overlay .author__avatar,
+  .page__hero .author__avatar,
+  .page__hero--overlay .page__lead img.author__avatar,
+  .page__hero .page__lead img.author__avatar {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-center .author__avatar,
+  .page__hero--overlay .author__avatar,
+  .page__hero .author__avatar,
+  .page__hero--overlay .page__lead img.author__avatar,
+  .page__hero .page__lead img.author__avatar {
+    width: 280px !important; /* your larger cap */
+    height: 280px !important;
+  }
+}
+
 
 /* =========================
    Centralized content everywhere
