@@ -155,11 +155,11 @@ html { background: transparent !important; }
 .page__hero .author__avatar,
 .page__hero--overlay .page__lead img.author__avatar,
 .page__hero .page__lead img.author__avatar {
-  width:  clamp(120px, 16vw, 280px) !important;
-  height: clamp(120px, 16vw, 280px) !important;
+  width:  clamp(180px, 16vw, 320px) !important;
+  height: clamp(180px, 16vw, 320px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 50% !important;
+  border-radius: 100% !important;
   box-shadow: 0 12px 30px rgba(0,0,0,.35);
   border: 2px solid rgba(255,255,255,.18);
 }
