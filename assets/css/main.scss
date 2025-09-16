@@ -155,8 +155,8 @@ html { background: transparent !important; }
 .page__hero .author__avatar,
 .page__hero--overlay .page__lead img.author__avatar,
 .page__hero .page__lead img.author__avatar {
-  width:  clamp(180px, 96vw, 320px) !important;
-  height: clamp(180px, 96vw, 320px) !important;
+  width:  clamp(180px, 6vw, 320px) !important;
+  height: clamp(180px, 6vw, 320px) !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 100% !important;
